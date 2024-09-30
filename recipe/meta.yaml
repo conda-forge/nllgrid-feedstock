@@ -30,13 +30,13 @@ requirements:
 test:
   imports:
     - nllgrid
-  commands:
-    - pip check
+  source_files:
+    - tests
+    - tests/data
   requires:
-    - pip
     - pytest
   commands:
-    - pytest --pyargs nllgrid
+    - pytest tests/
 
 about:
   home: https://github.com/claudiodsf/nllgrid
