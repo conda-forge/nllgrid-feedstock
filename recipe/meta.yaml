@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - setuptools
+    - versioneer
     - python >=3.7
   run:
     - numpy >=1.0
