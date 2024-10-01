@@ -1,5 +1,5 @@
 {% set name = "nllgrid" %}
-{% set version = "1.4.2" %}
+{% set version = "1.5.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nllgrid-{{ version }}.tar.gz
-  sha256: eecb1e6dfa573c8dfffe0105a8e00add797f85e9e56922487c4360c2f87e7644
+  sha256: f67d2a8492e160576ea4a81e2c76ad09e57ed47aaadfd8a4a8cd2b2f16db6d5e
 
 build:
   number: 0
@@ -18,26 +18,34 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - setuptools
+    - versioneer
+    - python >=3.7
   run:
     - numpy >=1.0
-    - pyproj
-    - python >=3.6
     - scipy >=0.16
+    - pyproj
+    - python >=3.7
 
 test:
   imports:
     - nllgrid
-  commands:
-    - pip check
+  source_files:
+    - tests
+    - tests/data
   requires:
-    - pip
+    - pytest
+  commands:
+    - pytest tests/
 
 about:
   home: https://github.com/claudiodsf/nllgrid
   summary: Python class for reading and writing NonLinLoc grid files
   license: CECILL-2.1
   license_file: LICENSE.txt
+  description: |
+    Python class for reading and writing NonLinLoc grid files.
+  dev_url: https://github.com/claudiodsf/nllgrid
 
 extra:
   recipe-maintainers:
