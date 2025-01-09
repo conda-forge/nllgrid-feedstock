@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nllgrid-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nllgrid-{{ version }}.tar.gz
   sha256: 7bf244a1cae72c75dfd17f57ad50411046c1faff0abbb01c929662b62b4a112f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,12 +20,12 @@ requirements:
     - pip
     - setuptools
     - versioneer
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - numpy >=1.0
     - scipy >=0.16
     - pyproj
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -35,6 +35,7 @@ test:
     - tests/data
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest tests/
 
