@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nllgrid-feedsto
 
 Home: https://github.com/claudiodsf/nllgrid
 
-Package license: CECILL-2.1
+Package license: GPL-3.0-or-later
 
 Summary: Python class for reading and writing NonLinLoc grid files
 
