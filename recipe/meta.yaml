@@ -1,5 +1,5 @@
 {% set name = "nllgrid" %}
-{% set version = "1.6" %}
+{% set version = "1.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nllgrid-{{ version }}.tar.gz
-  sha256: 1ac96bf650c800456d91560bd626430ba357b2f189e7abde1fca4ea6338e65c9
+  sha256: 5ddd74a563c3f4071af0d9e542358af9bd9b4c612046091c7a4300349669a722
 
 build:
   number: 0
